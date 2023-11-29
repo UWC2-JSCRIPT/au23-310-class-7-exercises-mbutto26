@@ -1,12 +1,13 @@
 // TODO
-const name = document.getElementById("name");
+const userName = document.getElementById("name");
 const email = document.getElementById("email");
 const form = document.getElementById("contact-form");
 const select = document.getElementById("contact-kind");
-const jobTitle = document.getElementById("business-options");
-const compWeb = document.getElementById("business-options");
+const jobTitle = document.getElementById("job-title");
+const compWeb = document.getElementById("company-website");
 const code = document.getElementById("talk-code");
-document.getElementById("myTextarea").placeholder = "Leave us a message here";
+
+let valid = false;
 
 const validLength = (input, min) => {
   if (input.value.trim().length > min) {
@@ -39,7 +40,6 @@ const handleSelect = (selectElement) => {
     code.parentElement.classList.remove("hidden");
     jobTitle.parentElement.classList.add("hidden");
     compWeb.parentElement.classList.add("hidden");
-    return textArea;
   }
 };
 
@@ -48,7 +48,7 @@ select.addEventListener("change", () => handleSelect(select));
 form.addEventListener("submit", (e) => {
   handleSelect(select);
   if (
-    validLength(name, 3) &&
+    validLength(userName, 3) &&
     validLength(message, 10) &&
     validateEmail(email)
   ) {

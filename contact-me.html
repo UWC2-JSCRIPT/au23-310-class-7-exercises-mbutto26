@@ -57,40 +57,33 @@
           <small class="error" aria-live="polite"></small>
         </div>
 
-        <div class="form-group hidden">
-          <label for="business-options">Job Title</label>
-          <input
-            id="business-options"
-            class="form-control validate-input"
-            type="text"
-            name="job-title"
-          />
+        <div class="form-group hidden" >
+          <label for="job-title">Job Title</label>
+            <input id="job-title" class="form-control validate-input" type="text" name="job-title"></input>
+              <label for="company-website" >Company Website</label>
+            <input id="company-website" class="form-control validate-input" type="text" name="company-website"></input>
           <small class="error" aria-live="polite"></small>
         </div>
-        <div class="form-group hidden">
-          <label for="business-options">Company Website</label>
-          <input
-            id="business-options"
-            class="form-control validate-input"
-            type="url"
-            name="company-website"
-          />
-          <small class="error" aria-live="polite"></small>
-        </div>
+
+
         <div class="form-group hidden">
           <label for="coding-language">Coding Language</label>
           <input
-            id="talk-code"
+            id="coding-language"
             class="form-control validate-input"
             type="text"
             name="coding-language"
-          />
+          /><textarea name="language" id="talk-code"></textarea>
           <small class="error" aria-live="polite"></small>
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="freeform" name="freeform" rows="4" cols="50">
-          </textarea>
+          <label for="message"></label>
+          <textarea
+            name="message"
+            rows="4"
+            cols="40"
+            placeholder="Leave message here"
+          ></textarea>
 
           <small class="error" aria-live="polite"></small>
         </div>
